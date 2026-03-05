@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const NAV_LINKS = ["Home", "Services", "Why Us", "Contact"];
+const NAV_LINKS = [
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "Why Us", href: "#why-us" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Navbar({ scrolled }) {
   const [open, setOpen] = useState(false);
@@ -15,33 +21,37 @@ export default function Navbar({ scrolled }) {
         }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-linear-to-br flex items-center justify-center">
-            {/* <span className="text-white font-display font-black text-xl">
-              V
-            </span> */}
-          </div>
-          <div>
-            <div className="font-[Montserrat] font-black text-2xl text-gray-900 leading-none">
-              Vronix
-            </div>
-            <div className="text-[11px] font-[Montserrat] tracking-normal pl-2 text-pink-brand uppercase font-bold">
-              Digital
-            </div>
-          </div>
-        </a>
+        {/* ── Logo ── */}
+        <Link to="/" className="flex items-center gap-3">
+          {/* <div className="w-10 h-10 rounded-xl bg-linear-to-br from-pink-brand to-maroon flex items-center justify-center">
+            <span className="text-white font-display font-black text-xl">V</span>
+          </div> */}
+          <h1 className="text-2xl font-extrabold tracking-tight font-[Montserrat]">
+            Vronix<span className="text-pink-600">Digital</span>
+          </h1>
+        </Link>
 
-        <div className="hidden md:flex items-center gap-9">
-          {NAV_LINKS.map((link) => (
+        {/* ── Desktop Links ── */}
+        <div className="hidden md:flex items-center gap-8">
+          {NAV_LINKS.map(({ label, href }) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase().replace(" ", "-")}`}
+              key={label}
+              href={href}
               className="nav-link text-sm font-medium text-gray-800 hover:text-pink-brand transition-colors duration-200"
             >
-              {link}
+              {label}
             </a>
           ))}
 
+          {/* Internship — special pill link */}
+          <Link
+            to="/internship"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-maroon border border-maroon/30 bg-pink-light px-4 py-2 rounded-full hover:bg-pink-brand hover:text-white hover:border-pink-brand transition-all duration-200"
+          >
+            🎓 Internship
+          </Link>
+
+          {/* Get Started CTA */}
           <a
             href="https://wa.me/919876543210?text=Hi%20Vronix%20Digital!%20I%20visited%20your%20website."
             target="_blank"
@@ -52,6 +62,7 @@ export default function Navbar({ scrolled }) {
           </a>
         </div>
 
+        {/* ── Mobile Hamburger ── */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-pink-brand text-2xl font-bold focus:outline-none"
@@ -60,18 +71,29 @@ export default function Navbar({ scrolled }) {
         </button>
       </div>
 
+      {/* ── Mobile Menu ── */}
       {open && (
         <div className="md:hidden bg-white border-t-2 border-pink-light px-6 py-4">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map(({ label, href }) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase().replace(" ", "-")}`}
+              key={label}
+              href={href}
               onClick={() => setOpen(false)}
               className="block py-3 border-b border-pink-light text-gray-800 font-medium hover:text-pink-brand transition-colors"
             >
-              {link}
+              {label}
             </a>
           ))}
+
+          {/* Internship mobile link */}
+          <Link
+            to="/internship"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2 py-3 border-b border-pink-light text-maroon font-bold hover:text-pink-brand transition-colors"
+          >
+            🎓 Internship Program
+          </Link>
+
           <a
             href="https://wa.me/919876543210"
             target="_blank"

@@ -1,28 +1,15 @@
-import { useState, useEffect } from 'react'
-import Navbar  from './components/Navbar'
-import Hero    from './components/Hero'
-// import Services from './components/Services'
-import WhyUs   from './components/WhyUs'
-import Contact  from './components/Contact'
-import Footer   from './components/Footer'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Internship from './pages/Internship'
 
-export default function App() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
+const App = () => {
   return (
-    <div className="font-body">
-      <Navbar scrolled={scrolled} />
-      <Hero />
-      {/* <Services />   */}
-      <WhyUs />
-      <Contact />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/"           element={<Home />} />
+      <Route path="/internship" element={<Internship />} />
+    </Routes>
   )
 }
+
+export default App
