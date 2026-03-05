@@ -1,8 +1,8 @@
 const POINTS = [
-  "Transparent monthly reporting",
-  "No long-term lock-in contracts",
-  "Dedicated account manager",
-  "Results guaranteed or we refund",
+  "Claim Your FREE Website",
+  "100% Growth Gurrenty with Contract",
+  "Book a Free Growth Consultation",
+  "Start Your Digital Journey Today",
 ];
 
 const STATS = [

@@ -6,7 +6,7 @@ const WHATSAPP_NUMBER = "919822452413";
 
 const INFO = [
   { icon: "📞", label: "Phone", value: "+91 9822452413" },
-  { icon: "📧", label: "Email", value: "vronixdigital@gmail.com" },
+  { icon: "📧", label: "Email", value: "info@vronixdigital.com" },
   { icon: "🌐", label: "Website", value: "www.vronixdigital.com" },
 ];
 
@@ -56,8 +56,8 @@ export default function Contact() {
             Get In Touch
           </span>
           <h2 className="font-display font-black text-gray-900 text-3xl md:text-5xl mt-3">
-            Let's <span className="text-pink-brand">Start Growing</span>{" "}
-            Together
+            Building <span className="text-pink-brand">Brands</span>{" "}
+            From Scratch
           </h2>
           <p className="text-gray-500 mt-3 text-sm">
             Fill the form or chat on WhatsApp — we reply within 30 minutes.
@@ -97,7 +97,7 @@ export default function Contact() {
               />
               <textarea
                 name="message"
-                placeholder="Tell us about your project *"
+                placeholder="Tell us about your business"
                 value={form.message}
                 onChange={handleChange}
                 rows={5}

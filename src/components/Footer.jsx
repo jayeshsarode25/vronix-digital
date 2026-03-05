@@ -8,7 +8,7 @@ const SERVICES = [
 ];
 
 const CONTACT = [
-  "+91 9876543210",
+  "+91 9822452413",
   "info@vronixdigital.com",
   "www.vronixdigital.com",
 ];
@@ -20,17 +20,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-pink-brand flex items-center justify-center">
+              {/* <div className="w-10 h-10 rounded-xl bg-pink-brand flex items-center justify-center">
                 <span className="text-white font-display font-black text-xl">
                   V
                 </span>
-              </div>
+              </div> */}
               <div>
                 <div className="font-display font-black text-xl leading-none">
                   Vronix Digital
                 </div>
                 <div className="text-[9px] tracking-[2px] text-pink-brand/80 uppercase mt-0.5">
-                  Growth Agency
+                  Advertsing & Multimedia Marketing Agency
                 </div>
               </div>
             </div>

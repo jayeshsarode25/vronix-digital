@@ -16,10 +16,10 @@ export default function Navbar({ scrolled }) {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-linear-to-br from-pink-brand to-maroon flex items-center justify-center">
-            <span className="text-white font-display font-black text-xl">
+          <div className="w-10 h-10 rounded-xl bg-linear-to-br flex items-center justify-center">
+            {/* <span className="text-white font-display font-black text-xl">
               V
-            </span>
+            </span> */}
           </div>
           <div>
             <div className="font-display font-black text-lg text-gray-900 leading-none">

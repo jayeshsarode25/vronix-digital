@@ -1,7 +1,7 @@
 const STATS = [
   { number: "15+", label: "Websites Successfully Delivered" },
   { number: "25+", label: "Business Development & Growth Projects" },
-  { number: "%", label: "Digital Expansion" },
+  { number: "50+", label: "Website" },
   { number: "99%", label: "Strategy + Creativity " },
 ];
 
@@ -19,15 +19,17 @@ export default function Hero() {
         </div>
 
         <h1 className="animate-fade-up-1 font-display font-black text-gray-900 leading-tight mt-6 text-4xl md:text-6xl lg:text-7xl">
-          Grow Your Business
+          She Dreams. She Builds. She Leads.
           <br />
-          <span className="text-pink-brand">3× Faster</span> With Digital
+          <span className="text-pink-brand">Women’s Day Special</span>
           <br />
-          <span className="text-maroon">Marketing That Works</span>
+          <span className="text-maroon">Free Professional Website</span>
         </h1>
+        <span className="text-maroon text-3xl font-bold leading-tight">Website with Our Master Dhamaka Growth Pack</span>
 
         <p className="animate-fade-up-2 text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mx-auto mt-5">
-          Empowering Indian Female Entrepreneurs & Women-Led Startups to build powerful brands from scratch and scale globally.
+          Empowering Indian Female Entrepreneurs & Women-Led Startups to build
+          powerful brands from scratch and scale globally.
         </p>
 
         <div className="animate-fade-up-3 flex flex-wrap gap-4 justify-center mt-10">

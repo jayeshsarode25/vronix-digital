@@ -1,32 +1,32 @@
 const SERVICES = [
   {
     icon: "📈",
-    title: "SEO Optimization",
+    title: "Advertising",
     desc: "Rank #1 on Google with data-driven SEO strategies that drive organic traffic and qualified leads to your business.",
   },
   {
     icon: "📱",
-    title: "Social Media Marketing",
+    title: "Marketing and Promotion",
     desc: "Build a powerful brand presence across Instagram, Facebook & LinkedIn with content that converts followers into customers.",
   },
   {
     icon: "🎯",
-    title: "Google Ads / PPC",
+    title: "Creative Growth",
     desc: "Maximize ROI with laser-targeted Google & Meta ad campaigns. Every rupee spent is tracked, optimized, and justified.",
   },
   {
     icon: "🌐",
-    title: "Web Design & Dev",
+    title: "Web Design & Development",
     desc: "Stunning, fast, mobile-first websites that convert visitors into paying customers 24/7.",
   },
   {
     icon: "✍️",
-    title: "Content Marketing",
+    title: "Content Creation",
     desc: "Compelling blogs, videos & creatives that build authority and keep your audience coming back for more.",
   },
   {
     icon: "📧",
-    title: "Email Marketing",
+    title: "Technology",
     desc: "Automated campaigns that nurture leads, recover carts, and generate repeat business on autopilot.",
   },
 ];
