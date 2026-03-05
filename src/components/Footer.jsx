@@ -1,10 +1,10 @@
 const SERVICES = [
   "Advertising",
   "Marketing and Promotion",
-  "Creative Growth",
+  "Public Relation(PR)",
   "Web Design & Development",
   "Content Creation",
-  "Technology",
+  "Branding & Positioning",
 ];
 
 const CONTACT = [
