@@ -1,7 +1,6 @@
 const STATS = [
-  { number: "15+", label: "Websites Successfully Delivered" },
+  { number: "50+", label: "Websites Successfully Delivered" },
   { number: "25+", label: "Business Development & Growth Projects" },
-  { number: "50+", label: "Website" },
   { number: "99%", label: "Strategy + Creativity " },
 ];
 
@@ -40,7 +39,7 @@ export default function Hero() {
             🚀 Start Growing Now
           </a>
           <a
-            href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20know%20about%20the%20Women%27s%20Day%20special%20offer."
+            href="https://wa.me/919822452413?text=Hi!%20I%20want%20to%20know%20about%20the%20Women%27s%20Day%20special%20offer."
             target="_blank"
             rel="noreferrer"
             className="bg-white text-maroon border-2 border-maroon font-bold text-base px-10 py-4 rounded-full hover:bg-pink-light transition-colors"

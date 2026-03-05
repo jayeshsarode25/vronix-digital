@@ -1,10 +1,10 @@
 const SERVICES = [
-  "SEO Optimization",
-  "Social Media",
-  "Google Ads",
-  "Web Design",
-  "Content Marketing",
-  "Email Marketing",
+  "Advertising",
+  "Marketing and Promotion",
+  "Creative Growth",
+  "Web Design & Development",
+  "Content Creation",
+  "Technology",
 ];
 
 const CONTACT = [
@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="font-display font-black text-xl leading-none">
                   Vronix Digital
                 </div>
-                <div className="text-[9px] tracking-[2px] text-pink-brand/80 uppercase mt-0.5">
+                <div className="text-[9px] tracking-[2px] text-pink-brand/80 uppercase font-bold mt-0.5">
                   Advertsing & Multimedia Marketing Agency
                 </div>
               </div>

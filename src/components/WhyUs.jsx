@@ -1,12 +1,12 @@
 const POINTS = [
   "Claim Your FREE Website",
-  "100% Growth Gurrenty with Contract",
+  "98% Growth Gurrenty with Contract",
   "Book a Free Growth Consultation",
-  "Start Your Digital Journey Today",
+  "Start Your Growth Journey Today",
 ];
 
 const STATS = [
-  { icon: "🏆", label: "Proven Results", sub: "15+ Professional Websites Successfully Delivered" },
+  { icon: "🏆", label: "Proven Results", sub: "50+ Professional Websites Successfully Delivered" },
   { icon: "📊", label: "Data-First", sub: " 25+ Business Development & Growth Projects" },
   {
     icon: "🤝",
@@ -22,7 +22,7 @@ export default function WhyUs() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div>
           <span className="text-pink-brand font-bold text-xs tracking-[3px] uppercase">
-            Why Vronix Digital
+            Why Vronix Digital ?
           </span>
 
           <h2 className="font-display font-black text-gray-900 text-3xl md:text-5xl mt-3 leading-tight">

@@ -22,10 +22,10 @@ export default function Navbar({ scrolled }) {
             </span> */}
           </div>
           <div>
-            <div className="font-display font-black text-lg text-gray-900 leading-none">
+            <div className="font-[Montserrat] font-black text-2xl text-gray-900 leading-none">
               Vronix
             </div>
-            <div className="text-[9px] tracking-[3px] text-pink-brand uppercase font-semibold">
+            <div className="text-[11px] font-[Montserrat] tracking-normal pl-2 text-pink-brand uppercase font-bold">
               Digital
             </div>
           </div>
