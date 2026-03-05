@@ -60,7 +60,7 @@ export default function Contact() {
             From Scratch
           </h2>
           <p className="text-gray-500 mt-3 text-sm">
-            Fill the form or chat on WhatsApp — we reply within 30 minutes.
+            Fill the form or chat on WhatsApp — we reply within 10 minutes.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export default function Contact() {
               </h3>
               <p className="text-white/80 text-sm leading-relaxed mb-8">
                 Prefer to chat? Message us on WhatsApp and get a response in
-                minutes. Available Mon–Sat, 10am–7pm.
+                minutes. Available 24/7/365
               </p>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Vronix%20Digital!%20I%20visited%20your%20website%20and%20want%20to%20discuss%20my%20project.`}
