@@ -35,11 +35,9 @@ function isMobile() {
   return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-// ✅ amount comes as a prop now — no hardcoded value
 export default function PaymentModal({ onClose, amount }) {
   const [copied, setCopied] = useState(false);
 
-  // ✅ QR code uses the prop amount dynamically
   const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
     `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(BUSINESS_NAME)}&am=${amount}&cu=INR`,
   )}`;
@@ -69,7 +67,7 @@ export default function PaymentModal({ onClose, amount }) {
             ✕
           </button>
           <div className="text-3xl mb-2">💳</div>
-          {/* ✅ shows whatever amount was passed */}
+
           <h3 className="font-display font-black text-2xl">Pay ₹{amount}</h3>
           <p className="text-white/75 text-sm mt-1">
             Digital Marketing Internship Fee
@@ -83,7 +81,6 @@ export default function PaymentModal({ onClose, amount }) {
                 Tap your preferred UPI app to pay instantly:
               </p>
               <div className="grid grid-cols-2 gap-3 mb-5">
-                {/* ✅ passes amount to each UPI app link */}
                 {UPI_APPS.map((app) => (
                   <a
                     key={app.name}
@@ -103,7 +100,6 @@ export default function PaymentModal({ onClose, amount }) {
               </p>
               <div className="flex justify-center mb-5">
                 <div className="p-3 bg-white border-2 border-pink-brand/20 rounded-2xl shadow-card">
-                  {/* ✅ QR code reflects the correct amount */}
                   <img
                     src={QR_URL}
                     alt="UPI QR Code"
@@ -136,7 +132,6 @@ export default function PaymentModal({ onClose, amount }) {
             </p>
           </div>
 
-          {/* ✅ WhatsApp message also shows correct amount */}
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20have%20paid%20₹${amount}%20for%20the%20Digital%20Marketing%20Internship.%20Please%20confirm%20my%20enrollment.`}
             target="_blank"
