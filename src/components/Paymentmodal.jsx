@@ -1,5 +1,4 @@
-const UPI_ID = "vronix@upi";
-const AMOUNT = "999";
+const UPI_ID = "9860608317-5@ybl";
 const BUSINESS_NAME = "Vronix Digital";
 const WHATSAPP_NUMBER = "919876543210";
 
@@ -7,7 +6,6 @@ const UPI_APPS = [
   {
     name: "Google Pay",
     icon: "🟢",
-
     url: (upi, amt, name) =>
       `tez://upi/pay?pa=${upi}&pn=${encodeURIComponent(name)}&am=${amt}&cu=INR`,
   },
@@ -31,19 +29,20 @@ const UPI_APPS = [
   },
 ];
 
-// QR code image URL — generated from UPI link via api.qrserver.com (free, no signup)
-const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
-  `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(BUSINESS_NAME)}&am=${AMOUNT}&cu=INR`,
-)}`;
-
 import { useState } from "react";
 
 function isMobile() {
   return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-export default function PaymentModal({ onClose }) {
+// ✅ amount comes as a prop now — no hardcoded value
+export default function PaymentModal({ onClose, amount }) {
   const [copied, setCopied] = useState(false);
+
+  // ✅ QR code uses the prop amount dynamically
+  const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
+    `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(BUSINESS_NAME)}&am=${amount}&cu=INR`,
+  )}`;
 
   const copyUPI = () => {
     navigator.clipboard.writeText(UPI_ID);
@@ -70,7 +69,8 @@ export default function PaymentModal({ onClose }) {
             ✕
           </button>
           <div className="text-3xl mb-2">💳</div>
-          <h3 className="font-display font-black text-2xl">Pay ₹{AMOUNT}</h3>
+          {/* ✅ shows whatever amount was passed */}
+          <h3 className="font-display font-black text-2xl">Pay ₹{amount}</h3>
           <p className="text-white/75 text-sm mt-1">
             Digital Marketing Internship Fee
           </p>
@@ -83,10 +83,11 @@ export default function PaymentModal({ onClose }) {
                 Tap your preferred UPI app to pay instantly:
               </p>
               <div className="grid grid-cols-2 gap-3 mb-5">
+                {/* ✅ passes amount to each UPI app link */}
                 {UPI_APPS.map((app) => (
                   <a
                     key={app.name}
-                    href={app.url(UPI_ID, AMOUNT, BUSINESS_NAME)}
+                    href={app.url(UPI_ID, amount, BUSINESS_NAME)}
                     className="flex items-center gap-2 justify-center bg-pink-light border border-pink-brand/20 text-gray-800 font-semibold text-sm py-3.5 rounded-xl hover:bg-pink-brand hover:text-white transition-all duration-200"
                   >
                     <span className="text-xl">{app.icon}</span>
@@ -102,6 +103,7 @@ export default function PaymentModal({ onClose }) {
               </p>
               <div className="flex justify-center mb-5">
                 <div className="p-3 bg-white border-2 border-pink-brand/20 rounded-2xl shadow-card">
+                  {/* ✅ QR code reflects the correct amount */}
                   <img
                     src={QR_URL}
                     alt="UPI QR Code"
@@ -134,8 +136,9 @@ export default function PaymentModal({ onClose }) {
             </p>
           </div>
 
+          {/* ✅ WhatsApp message also shows correct amount */}
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20have%20paid%20₹${AMOUNT}%20for%20the%20Digital%20Marketing%20Internship.%20Please%20confirm%20my%20enrollment.`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20have%20paid%20₹${amount}%20for%20the%20Digital%20Marketing%20Internship.%20Please%20confirm%20my%20enrollment.`}
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white font-bold py-3.5 rounded-2xl hover:opacity-90 transition-opacity text-sm"
