@@ -1,42 +1,82 @@
-const UPI_ID = "vronix@upi";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import PaymentModal from "../components/Paymentmodal";
+
 const INTERNSHIP_FEE = "999";
 const WHATSAPP_NUMBER = "919822452413";
-const BUSINESS_NAME = "Vronix Digital";
-const DURATION = "3 Months";
+const DURATION = "3 Months Training + 1 Month Internship";
 const SEATS = "20";
-
-const UPI_LINK = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(BUSINESS_NAME)}&am=${INTERNSHIP_FEE}&cu=INR&tn=${encodeURIComponent("Digital Marketing Internship Fee")}`;
 
 const SKILLS = [
   {
     icon: "📈",
-    title: "Social Media Strategy",
-    desc: "Learn how to plan and grow brands using proven social media marketing strategies.",
+    title: "SEO & Blogging",
+    desc: "Rank websites on Google with on-page, off-page & technical SEO strategies.",
   },
   {
     icon: "📱",
-    title: "Content Creation",
-    desc: "Create engaging and viral content for Instagram, Facebook, and LinkedIn.",
+    title: "Social Media Marketing",
+    desc: "Grow brand presence on Instagram, Facebook & LinkedIn with content that converts.",
   },
   {
     icon: "🎯",
-    title: "SEO",
-    desc: "Master on-page, off-page, and technical SEO to rank websites higher on Google.",
+    title: "Google Ads (PPC)",
+    desc: "Run real ad campaigns with live budgets — search, display & YouTube ads.",
   },
   {
     icon: "🎨",
-    title: "Ad Campaigns",
-    desc: "Learn to run and optimize ads on Google, YouTube, and social media platforms.",
+    title: "Canva & Creatives",
+    desc: "Design professional posts, banners, reel thumbnails and ad creatives.",
   },
   {
     icon: "📧",
-    title: "Real Client Projects",
-    desc: "Work on real business projects and understand how marketing works in the real world.",
+    title: "Email Marketing",
+    desc: "Build funnels, write copy & automate campaigns using industry tools.",
   },
   {
     icon: "📊",
-    title: "Hands-on training",
-    desc: "Analyze campaign data using tools like Google Analytics and Meta Insights.",
+    title: "Analytics & Reporting",
+    desc: "Read data from Google Analytics & Meta Insights to make smart decisions.",
+  },
+  {
+    icon: "💼",
+    title: "Business Strategy",
+    desc: "Understand how businesses grow — from idea validation to scaling and profitability.",
+  },
+  {
+    icon: "🛒",
+    title: "Market Research",
+    desc: "Identify target audiences, study competitors and find market opportunities.",
+  },
+  {
+    icon: "🌐",
+    title: "Digital Marketing Overview",
+    desc: "Master the full digital marketing funnel — awareness, consideration and conversion.",
+  },
+  {
+    icon: "📣",
+    title: "Public Relations (PR)",
+    desc: "Build brand credibility through media coverage, press releases and reputation management.",
+  },
+  {
+    icon: "📺",
+    title: "Advertising",
+    desc: "Learn offline and online advertising strategies that drive awareness and sales.",
+  },
+  {
+    icon: "🎁",
+    title: "Promotions & Offers",
+    desc: "Design campaigns, discount strategies and seasonal promotions that boost revenue.",
+  },
+  {
+    icon: "🏷️",
+    title: "Branding",
+    desc: "Create a strong brand identity — logo, tone, colours and positioning that stand out.",
+  },
+  {
+    icon: "🚀",
+    title: "Entrepreneurship",
+    desc: "Learn the mindset, tools and strategies to launch and grow your own business or agency.",
   },
 ];
 
@@ -58,12 +98,12 @@ const BENEFITS = [
   },
   {
     icon: "🔗",
-    title: "Hands-on training",
+    title: "Hands-on Training",
     desc: "Learn by doing through practical assignments and real marketing tools.",
   },
   {
     icon: "🚀",
-    title: "Real projects experience",
+    title: "Real Project Experience",
     desc: "Build real-world experience that prepares you for jobs and freelancing.",
   },
   {
@@ -96,8 +136,6 @@ const FAQS = [
   },
 ];
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
 
 function FAQItem({ q, a }) {
   const [open, setOpen] = useState(false);
@@ -124,16 +162,10 @@ function FAQItem({ q, a }) {
 }
 
 export default function Internship() {
-  const handlePayNow = () => {
-    window.location.href = UPI_LINK;
+  const [showAll, setShowAll] = useState(false);
+  const [showPayment, setShowPayment] = useState(false);
 
-    setTimeout(() => {
-      window.open(
-        `https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20want%20to%20enroll%20in%20the%20Digital%20Marketing%20Internship.%20Please%20share%20payment%20details.`,
-        "_blank",
-      );
-    }, 1500);
-  };
+  const handlePayNow = () => setShowPayment(true);
 
   return (
     <div className="font-body bg-white min-h-screen">
@@ -178,17 +210,26 @@ export default function Internship() {
           </h1>
 
           <p className="animate-fade-up-2 text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mx-auto mt-5">
+            Want to earn more than{" "}
+            <strong className="text-maroon">3 lakh</strong> a month or start
+            your own business? Kick-start your career with us.
+          </p>
+
+          <p className="animate-fade-up-2 text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mx-auto mt-3">
             A hands-on{" "}
-            <strong className="text-maroon">{DURATION} internship</strong> where
-            you work on real campaigns, build a portfolio, and get certified.
+            <strong className="text-maroon">
+              3-month future-oriented course with free 1-month internship
+            </strong>{" "}
+            — work with real businesses, build your portfolio and get a letter
+            of recommendation.
           </p>
 
           <div className="animate-fade-up-3 flex flex-wrap justify-center gap-3 mt-8">
             {[
-              { icon: "⏳", text: `${DURATION} Duration` },
-              { icon: "💻", text: "Ofline" },
+              { icon: "⏳", text: `${DURATION}` },
+              { icon: "💻", text: "Offline / Online" },
               { icon: "🎓", text: "Certificate Included" },
-              { icon: "💼", text: "Live Projects" },
+              { icon: "💼", text: "Run Real Business" },
             ].map(({ icon, text }) => (
               <span
                 key={text}
@@ -204,7 +245,7 @@ export default function Internship() {
               onClick={handlePayNow}
               className="animate-pulse-pink inline-flex items-center gap-3 bg-linear-to-r from-pink-brand to-maroon text-white font-bold text-lg px-12 py-5 rounded-full shadow-pink hover:opacity-90 transition-opacity"
             >
-              🚀 Enroll Now — ₹{INTERNSHIP_FEE} Only
+              🚀 Book Your Slot — ₹{INTERNSHIP_FEE} Only
             </button>
             <p className="text-gray-400 text-xs mt-3">
               Pay via UPI · GPay · PhonePe · Paytm · Any UPI App
@@ -229,7 +270,7 @@ export default function Internship() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {SKILLS.map((skill, i) => (
+            {(showAll ? SKILLS : SKILLS.slice(0, 6)).map((skill, i) => (
               <div
                 key={i}
                 className="service-card bg-white rounded-2xl p-7 border border-pink-light shadow-card"
@@ -246,6 +287,15 @@ export default function Internship() {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-10">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center gap-2 border-2 border-pink-brand text-pink-brand font-bold px-8 py-3.5 rounded-full hover:bg-pink-brand hover:text-white transition-all duration-200"
+            >
+              {showAll ? "↑ Show Less" : `✨ Show All ${SKILLS.length} Skills`}
+            </button>
+          </div>
         </div>
       </section>
 
@@ -259,7 +309,6 @@ export default function Internship() {
               What You <span className="text-pink-brand">Get</span>
             </h2>
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {BENEFITS.map((b, i) => (
               <div
@@ -294,27 +343,59 @@ export default function Internship() {
             </h2>
           </div>
 
+          <div className="bg-yellow-400 rounded-2xl px-6 py-4 mb-4 text-center">
+            <p className="text-yellow-900 font-black text-sm tracking-wide uppercase">
+              🎓 Exclusive for Ahoy Students — 25% Off!
+            </p>
+            <p className="text-yellow-800 text-xs mt-1 font-medium">
+              ⏳ Book your seat within <strong>48 hours</strong> to grab this
+              discount
+            </p>
+          </div>
+
           <div className="bg-linear-to-br from-maroon to-pink-brand rounded-3xl p-10 text-white text-center shadow-heavy relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full" />
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/10 rounded-full" />
-
             <div className="relative z-10">
               <div className="text-white/70 text-sm font-medium tracking-widest uppercase mb-2">
                 Digital Marketing Internship
               </div>
-              <div className="font-display font-black text-7xl mb-1">
-                ₹{INTERNSHIP_FEE}
+
+              <div className="flex items-center justify-center gap-3 mb-1">
+                <span className="text-white/50 line-through text-2xl font-bold">
+                  ₹25,000
+                </span>
+                <span className="bg-yellow-400 text-yellow-900 text-xs font-black px-3 py-1 rounded-full">
+                  25% OFF
+                </span>
               </div>
-              <div className="text-white/70 text-sm mb-8">
-                One-time payment · {DURATION} access
+
+              <div className="font-display font-black text-7xl mb-1">
+                ₹18,750
+              </div>
+              <div className="text-white/70 text-sm mb-2">
+                You save <strong className="text-yellow-300">₹6,250</strong> 🎉
+              </div>
+              <div className="text-white/60 text-xs mb-8">
+                One-time payment · {DURATION}
+              </div>
+
+              <div className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 mb-8 text-xs text-white/80">
+                ⚠️ This offer is valid{" "}
+                <strong className="text-yellow-300">
+                  only for Ahoy students
+                </strong>{" "}
+                who enroll within{" "}
+                <strong className="text-yellow-300">48 hours</strong>. Price
+                goes back to ₹25,000 after.
               </div>
 
               <ul className="text-left space-y-3 mb-10">
                 {[
-                  "3 Months of live training",
+                  "3 Months live training + 1 Month Internship",
                   "Certificate of completion",
                   "Live client project experience",
-                  "LinkedIn recommendation",
+                  "Letter of recommendation",
                   "Placement assistance",
                   "Lifetime access to recordings",
                 ].map((item) => (
@@ -331,7 +412,7 @@ export default function Internship() {
                 onClick={handlePayNow}
                 className="w-full bg-white text-maroon font-black text-lg py-4 rounded-2xl hover:bg-pink-light transition-colors shadow-lg"
               >
-                Pay ₹{INTERNSHIP_FEE} via UPI →
+                Book Now at ₹18,750 →
               </button>
               <p className="text-white/60 text-xs mt-4">
                 GPay · PhonePe · Paytm · Any UPI App supported
@@ -345,6 +426,7 @@ export default function Internship() {
               send it to us on WhatsApp. Our team will onboard you within{" "}
               <strong>24 hours.</strong>
             </p>
+
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20have%20paid%20for%20the%20internship.%20Here%20is%20my%20payment%20screenshot.`}
               target="_blank"
@@ -383,7 +465,7 @@ export default function Internship() {
           Ready to Start Your Career? 🚀
         </h2>
         <p className="text-white/80 mb-8 text-base max-w-md mx-auto">
-          Only <strong>Limited seats</strong> available. Don't miss your chance
+          Only <strong>limited seats</strong> available. Don't miss your chance
           to get certified.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -391,7 +473,7 @@ export default function Internship() {
             onClick={handlePayNow}
             className="bg-white text-maroon font-black px-10 py-4 rounded-full hover:bg-pink-light transition-colors text-base"
           >
-            Enroll Now — ₹{INTERNSHIP_FEE} →
+            Book Your Slot — ₹{INTERNSHIP_FEE} →
           </button>
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20want%20to%20know%20more%20about%20the%20Digital%20Marketing%20Internship.`}
@@ -410,6 +492,8 @@ export default function Internship() {
           Back to Home
         </Link>
       </footer>
+
+      {showPayment && <PaymentModal onClose={() => setShowPayment(false)} />}
     </div>
   );
 }
