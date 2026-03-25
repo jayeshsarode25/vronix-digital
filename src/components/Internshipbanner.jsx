@@ -56,7 +56,7 @@ export default function InternshipBanner() {
                 3 Months 
               </div>
               <div className="font-display font-black text-maroon text-4xl mb-1">
-                ₹999
+                
               </div>
               <div className="text-gray-400 text-xs mb-6">One-time · All inclusive</div>
 

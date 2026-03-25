@@ -150,84 +150,84 @@ function FAQItem({ q, a }) {
   );
 }
 
-function PricingPopup({ onClose, onEnroll }) {
-  return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <div
-        className="bg-white rounded-3xl w-full max-w-sm shadow-heavy overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="bg-yellow-400 px-6 py-3 text-center">
-          <p className="text-yellow-900 font-black text-sm uppercase tracking-wide">
-            🎓 Exclusive for Ahoy Students — 25% Off!
-          </p>
-          <p className="text-yellow-800 text-xs mt-0.5 font-medium">
-            ⏳ Book within <strong>48 hours</strong> to grab this discount
-          </p>
-        </div>
+// function PricingPopup({ onClose, onEnroll }) {
+//   return (
+//     <div
+//       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+//       onClick={onClose}
+//     >
+//       <div
+//         className="bg-white rounded-3xl w-full max-w-sm shadow-heavy overflow-hidden"
+//         onClick={(e) => e.stopPropagation()}
+//       >
+//         <div className="bg-yellow-400 px-6 py-3 text-center">
+//           <p className="text-yellow-900 font-black text-sm uppercase tracking-wide">
+//             🎓 Exclusive for Ahoy Students — 25% Off!
+//           </p>
+//           <p className="text-yellow-800 text-xs mt-0.5 font-medium">
+//             ⏳ Book within <strong>48 hours</strong> to grab this discount
+//           </p>
+//         </div>
 
-        <div className="bg-linear-to-br from-maroon to-pink-brand p-8 text-white text-center relative overflow-hidden">
-          <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full" />
-          <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-white/10 rounded-full" />
+//         <div className="bg-linear-to-br from-maroon to-pink-brand p-8 text-white text-center relative overflow-hidden">
+//           <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full" />
+//           <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-white/10 rounded-full" />
 
-          <div className="relative z-10">
-            <div className="text-white/70 text-xs uppercase tracking-widest mb-3">
-              Digital Marketing Internship
-            </div>
+//           <div className="relative z-10">
+//             <div className="text-white/70 text-xs uppercase tracking-widest mb-3">
+//               Digital Marketing Internship
+//             </div>
 
-            <div className="flex items-center justify-center gap-3 mb-1">
-              <span className="text-white/50 line-through text-xl font-bold">
-                ₹25,000
-              </span>
-              <span className="bg-yellow-400 text-yellow-900 text-xs font-black px-3 py-1 rounded-full">
-                25% OFF
-              </span>
-            </div>
+//             <div className="flex items-center justify-center gap-3 mb-1">
+//               <span className="text-white/50 line-through text-xl font-bold">
+//                 ₹25,000
+//               </span>
+//               <span className="bg-yellow-400 text-yellow-900 text-xs font-black px-3 py-1 rounded-full">
+//                 25% OFF
+//               </span>
+//             </div>
 
-            <div className="font-display font-black text-6xl mb-1">₹18,750</div>
-            <div className="text-white/70 text-sm mb-1">
-              You save <strong className="text-yellow-300">₹6,250</strong> 🎉
-            </div>
-            <div className="text-white/50 text-xs mb-6">{DURATION}</div>
+//             <div className="font-display font-black text-6xl mb-1">₹18,750</div>
+//             <div className="text-white/70 text-sm mb-1">
+//               You save <strong className="text-yellow-300">₹6,250</strong> 🎉
+//             </div>
+//             <div className="text-white/50 text-xs mb-6">{DURATION}</div>
 
-            <ul className="text-left space-y-2 mb-6">
-              {[
-                "3 Months training + 1 Month Internship",
-                "Certificate of completion",
-                "Live client projects",
-                "Letter of recommendation",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm">
-                  <span className="w-4 h-4 bg-white/20 rounded-full flex items-center justify-center text-[10px] shrink-0">
-                    ✓
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+//             <ul className="text-left space-y-2 mb-6">
+//               {[
+//                 "3 Months training + 1 Month Internship",
+//                 "Certificate of completion",
+//                 "Live client projects",
+//                 "Letter of recommendation",
+//               ].map((item) => (
+//                 <li key={item} className="flex items-center gap-2 text-sm">
+//                   <span className="w-4 h-4 bg-white/20 rounded-full flex items-center justify-center text-[10px] shrink-0">
+//                     ✓
+//                   </span>
+//                   {item}
+//                 </li>
+//               ))}
+//             </ul>
 
-            <button
-              onClick={onEnroll}
-              className="w-full bg-white text-maroon font-black text-base py-3.5 rounded-2xl hover:bg-pink-light transition-colors shadow-lg mb-3"
-            >
-              Book Now at ₹18,750 →
-            </button>
+//             <button
+//               onClick={onEnroll}
+//               className="w-full bg-white text-maroon font-black text-base py-3.5 rounded-2xl hover:bg-pink-light transition-colors shadow-lg mb-3"
+//             >
+//               Book Now at ₹18,750 →
+//             </button>
 
-            <button
-              onClick={onClose}
-              className="w-full text-white/50 text-xs hover:text-white/80 transition-colors py-1"
-            >
-              Maybe later
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+//             <button
+//               onClick={onClose}
+//               className="w-full text-white/50 text-xs hover:text-white/80 transition-colors py-1"
+//             >
+//               Maybe later
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default function Internship() {
   const [showAll, setShowAll] = useState(false);
@@ -317,7 +317,7 @@ export default function Internship() {
               onClick={() => handlePayNow('999')}
               className="animate-pulse-pink inline-flex items-center gap-3 bg-linear-to-r from-pink-brand to-maroon text-white font-bold text-lg px-12 py-5 rounded-full shadow-pink hover:opacity-90 transition-opacity"
             >
-              🚀 Book Your Slot — ₹{INTERNSHIP_FEE} Only
+              🚀 Book Your Slot
             </button>
             <p className="text-gray-400 text-xs mt-3">
               Pay via UPI · GPay · PhonePe · Paytm · Any UPI App
@@ -402,7 +402,7 @@ export default function Internship() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      {/* <section className="py-20 px-6 bg-white">
         <div className="max-w-lg mx-auto">
           <div className="text-center mb-10">
             <span className="text-pink-brand font-bold text-xs tracking-[3px] uppercase">
@@ -449,7 +449,7 @@ export default function Internship() {
                 ₹18,750
               </div>
               <div className="text-white/70 text-sm mb-2">
-                You save <strong className="text-yellow-300">₹6,250</strong> 🎉
+                You save <strong className="text-yellow-300"></strong> 🎉
               </div>
               <div className="text-white/60 text-xs mb-8">
                 One-time payment · {DURATION}
@@ -472,10 +472,10 @@ export default function Internship() {
                 ))}
               </ul>
               <button
-                onClick={() => handlePayNow('18750')}
+                onClick={() => handlePayNow('')}
                 className="w-full bg-white text-maroon font-black text-lg py-4 rounded-2xl hover:bg-pink-light transition-colors shadow-lg"
               >
-                Book Now at ₹18,750 →
+                Book Now →
               </button>
               <p className="text-white/60 text-xs mt-4">
                 GPay · PhonePe · Paytm · Any UPI App supported
@@ -501,7 +501,7 @@ export default function Internship() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 px-6 bg-pink-light">
         <div className="max-w-2xl mx-auto">
@@ -534,7 +534,7 @@ export default function Internship() {
             onClick={() => handlePayNow('999')}
             className="bg-white text-maroon font-black px-10 py-4 rounded-full hover:bg-pink-light transition-colors text-base"
           >
-            Book Your Slot — ₹{INTERNSHIP_FEE} →
+            Book Your Slot →
           </button>
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20want%20to%20know%20more%20about%20the%20Digital%20Marketing%20Internship.`}
@@ -556,12 +556,12 @@ export default function Internship() {
 
       {showPayment && <PaymentModal onClose={() => setShowPayment(false)} amount={payAmount} />}
 
-      {showPopup && (
+      {/* {showPopup && (
         <PricingPopup
           onClose={() => setShowPopup(false)}
           onEnroll={() => { setShowPopup(false); handlePayNow('18750'); }}
         />
-      )}
+      )} */}
     </div>
   );
 }
