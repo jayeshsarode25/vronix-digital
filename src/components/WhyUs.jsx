@@ -1,5 +1,5 @@
 const POINTS = [
-  "Claim Your FREE Website",
+  "Claim Your Website at Just Rs.999/-",
   "98% Growth Gurrenty with Contract",
   "Book a Free Growth Consultation",
   "Start Your Growth Journey Today",
@@ -7,7 +7,7 @@ const POINTS = [
 
 const STATS = [
   { icon: "🏆", label: "Proven Results", sub: "50+ Professional Websites Successfully Delivered" },
-  { icon: "📊", label: "Data-First", sub: " 25+ Business Development & Growth Projects" },
+  { icon: "📊", label: "Data-First", sub: " 60+ Business Development & Growth Projects" },
   {
     icon: "🤝",
     label: "Dedicated Manager",
@@ -28,7 +28,7 @@ export default function WhyUs() {
           <h2 className="font-display font-black text-gray-900 text-3xl md:text-5xl mt-3 leading-tight">
             We Don't Just Market —
             <br />
-            <span className="text-pink-brand">We Grow Businesses</span>
+            <span className="text-pink-brand">We create Revenue Systems</span>
           </h2>
 
           <p className="text-gray-500 mt-5 leading-relaxed text-base">
@@ -52,7 +52,7 @@ export default function WhyUs() {
             href="#contact"
             className="inline-block mt-10 bg-linear-to-r from-pink-brand to-maroon text-white font-bold px-9 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
-            Book a Free Growth Consultation →
+            Book Your Slot With Just One Click →
           </a>
         </div>
 

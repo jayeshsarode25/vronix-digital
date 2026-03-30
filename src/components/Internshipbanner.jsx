@@ -29,7 +29,7 @@ export default function InternshipBanner() {
               <h2 className="font-display font-black text-3xl md:text-4xl leading-tight mb-3">
                 Digital Marketing
                 <br />
-                <span className="text-pink-light">Internship Program</span>
+                <span className="text-pink-light">Career Program</span>
               </h2>
 
               <p className="text-white/75 text-sm leading-relaxed max-w-sm mb-6">

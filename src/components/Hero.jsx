@@ -1,6 +1,6 @@
 const STATS = [
   { number: "50+", label: "Websites Successfully Delivered" },
-  { number: "25+", label: "Business Development & Growth Projects" },
+  { number: "60+", label: "Business Development & Growth Projects" },
   { number: "99%", label: "Strategy + Creativity " },
 ];
 
@@ -13,21 +13,21 @@ export default function Hero() {
       <div className="max-w-5xl w-full mx-auto text-center">
         <div className="animate-fade-up">
           <span className="inline-block bg-pink-light text-pink-brand border border-pink-brand/20 text-xs font-bold tracking-[2.5px] uppercase px-5 py-2 rounded-full">
-            🌸 Women's Day Special Offer
+             We're Not Fooling You
           </span>
         </div>
 
         <h1 className="animate-fade-up-1 font-display font-black text-gray-900 leading-tight mt-6 text-4xl md:text-6xl lg:text-7xl">
-          She Dreams. She Builds. She Leads.
+          Strategy, Creativity, And Marketing
           <br />
-          <span className="text-pink-brand">Women’s Day Special</span>
+          <span className="text-pink-brand">That Drives Results</span>
           <br />
-          <span className="text-maroon">Free Professional Website</span>
+          <span className="text-maroon">Claim Your Website Just ₹999</span>
         </h1>
-        <span className="text-maroon text-3xl font-bold leading-tight">Website with Our Master Dhamaka Growth Pack</span>
+        <span className="text-maroon text-3xl font-bold leading-tight">With Our Master Dhamaka Growth Pack</span>
 
         <p className="animate-fade-up-2 text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mx-auto mt-5">
-          Empowering Indian Female Entrepreneurs & Women-Led Startups to build
+          Empowering Indian Entrepreneurs & Startups to build
           powerful brands from scratch and scale globally.
         </p>
 
@@ -36,7 +36,7 @@ export default function Hero() {
             href="#contact"
             className="animate-pulse-pink bg-linear-to-r from-pink-brand to-maroon text-white font-bold text-base px-10 py-4 rounded-full shadow-pink hover:opacity-90 transition-opacity"
           >
-            🚀 Start Growing Now
+            🚀 Claim Offer Now
           </a>
           <a
             href="https://wa.me/919822452413?text=Hi!%20I%20want%20to%20know%20about%20the%20Women%27s%20Day%20special%20offer."
@@ -44,13 +44,13 @@ export default function Hero() {
             rel="noreferrer"
             className="bg-white text-maroon border-2 border-maroon font-bold text-base px-10 py-4 rounded-full hover:bg-pink-light transition-colors"
           >
-            💬 WhatsApp Us
+            💬 Get Info
           </a>
         </div>
 
         <div className="animate-float mt-14 rounded-3xl overflow-hidden shadow-heavy border border-pink-brand/20 max-w-4xl mx-auto">
           <img
-            src="/banner.jpeg"
+            src="/banner1smdbfgbf.jpeg"
             alt="Women's Day Special Offer — Free Website on Master Dhamaka Pack"
             className="w-full object-cover block"
           />

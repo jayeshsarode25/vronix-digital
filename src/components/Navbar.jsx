@@ -48,7 +48,7 @@ export default function Navbar({ scrolled }) {
             to="/internship"
             className="inline-flex items-center gap-1.5 text-sm font-bold text-maroon border border-maroon/30 bg-pink-light px-4 py-2 rounded-full hover:bg-pink-brand hover:text-white hover:border-pink-brand transition-all duration-200"
           >
-            🎓 Internship
+            🎓 Write Career
           </Link>
 
           {/* Get Started CTA */}
@@ -91,7 +91,7 @@ export default function Navbar({ scrolled }) {
             onClick={() => setOpen(false)}
             className="flex items-center gap-2 py-3 border-b border-pink-light text-maroon font-bold hover:text-pink-brand transition-colors"
           >
-            🎓 Internship Program
+            🎓 Write Career
           </Link>
 
           <a
