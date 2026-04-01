@@ -12,15 +12,15 @@ export default function Hero() {
     >
       <div className="max-w-5xl w-full mx-auto text-center">
         <div className="animate-fade-up">
-          <span className="inline-block bg-pink-light text-pink-brand border border-pink-brand/20 text-xs font-bold tracking-[2.5px] uppercase px-5 py-2 rounded-full">
+          <span className="inline-block bg-pink-light text-black border border-pink-brand/30 text-xs font-bold tracking-[2.5px] uppercase px-5 py-2 rounded-full">
              We're Not Fooling You
           </span>
         </div>
 
         <h1 className="animate-fade-up-1 font-display font-black text-gray-900 leading-tight mt-6 text-4xl md:text-6xl lg:text-7xl">
-          Strategy, Creativity, And Marketing
+          We Use Social Media As
           <br />
-          <span className="text-pink-brand">That Drives Results</span>
+          <span className="text-pink-brand">A Weapon for Creating Revenue Systems</span>
           <br />
           <span className="text-maroon">Claim Your Website Just ₹999</span>
         </h1>
@@ -50,7 +50,7 @@ export default function Hero() {
 
         <div className="animate-float mt-14 rounded-3xl overflow-hidden shadow-heavy border border-pink-brand/20 max-w-4xl mx-auto">
           <img
-            src="/banner1smdbfgbf.jpeg"
+            src="/banner.jpeg"
             alt="Women's Day Special Offer — Free Website on Master Dhamaka Pack"
             className="w-full object-cover block"
           />

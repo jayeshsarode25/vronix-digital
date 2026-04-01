@@ -48,7 +48,7 @@ export default function Navbar({ scrolled }) {
             to="/internship"
             className="inline-flex items-center gap-1.5 text-sm font-bold text-maroon border border-maroon/30 bg-pink-light px-4 py-2 rounded-full hover:bg-pink-brand hover:text-white hover:border-pink-brand transition-all duration-200"
           >
-            🎓 Write Career
+            🎓 Career
           </Link>
 
           {/* Get Started CTA */}

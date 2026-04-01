@@ -22,7 +22,7 @@ const Home = () => {
       <Navbar scrolled={scrolled} />
       <Hero />
       {/* <Services />   */}
-      <InternshipBanner/>
+      {/* <InternshipBanner/> */}
       <WhyUs />
       <Contact />
       <Footer />
