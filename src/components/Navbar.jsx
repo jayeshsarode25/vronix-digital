@@ -27,7 +27,7 @@ export default function Navbar({ scrolled }) {
             <span className="text-white font-display font-black text-xl">V</span>
           </div> */}
           <h1 className="text-2xl font-extrabold tracking-tight font-[Montserrat]">
-            Vronix<span className="text-pink-600">Digital</span>
+            Vronix<span className="text-[#c172f6]">Digital</span>
           </h1>
         </Link>
 

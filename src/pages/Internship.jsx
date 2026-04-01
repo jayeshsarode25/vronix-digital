@@ -251,7 +251,7 @@ export default function Internship() {
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">
           <Link to="/" className="flex items-center gap-2 shrink-0">
             <h1 className="text-lg md:text-2xl font-extrabold tracking-tight font-[Montserrat]">
-              Vronix<span className="text-pink-600">Digital</span>
+              Vronix<span className="text-[#c172f6]">Digital</span>
             </h1>
           </Link>
           <div className="flex items-center gap-2 md:gap-4">
