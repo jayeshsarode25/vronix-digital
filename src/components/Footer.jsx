@@ -15,7 +15,7 @@ const CONTACT = [
 
 export default function Footer() {
   return (
-    <footer className="bg-maroon text-white px-6 pt-16 pb-8">
+    <footer className="bg-maroon text-black px-6 pt-16 pb-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="font-display font-black text-xl leading-none">
                   Vronix Digital
                 </div>
-                <div className="text-[9px] tracking-[2px] text-pink-brand/80 uppercase font-bold mt-0.5">
+                <div className="text-[9px] tracking-[2px] text-black uppercase font-bold mt-0.5">
                   Advertsing & Multimedia Marketing Agency
                 </div>
               </div>
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white/40 text-[10px] uppercase tracking-[3px] font-bold mb-5">
+            <h4 className="text-white/70 text-[10px] uppercase tracking-[3px] font-bold mb-5">
               Services
             </h4>
             <ul className="space-y-2.5">
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white/40 text-[10px] uppercase tracking-[3px] font-bold mb-5">
+            <h4 className="text-white/70 text-[10px] uppercase tracking-[3px] font-bold mb-5">
               Contact
             </h4>
             <ul className="space-y-2.5 mb-6">
