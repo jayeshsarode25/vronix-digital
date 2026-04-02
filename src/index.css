@@ -44,7 +44,7 @@ body { font-family: 'DM Sans', sans-serif; background: #fff; color: #111; }
 
 ::-webkit-scrollbar       { width: 5px; }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #E8196B; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #2f2e2e; border-radius: 4px; }
 
 .nav-link { position: relative; }
 .nav-link::after {

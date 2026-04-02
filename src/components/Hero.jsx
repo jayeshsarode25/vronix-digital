@@ -11,16 +11,14 @@ export default function Hero() {
       className="min-h-screen bg-white flex flex-col items-center justify-center pt-28 pb-20 px-6"
     >
       <div className="max-w-5xl w-full mx-auto text-center">
-        <div className="animate-fade-up">
+        {/* <div className="animate-fade-up">
           <span className="inline-block bg-pink-light text-black border border-pink-brand/30 text-xs font-bold tracking-[2.5px] uppercase px-5 py-2 rounded-full">
              We're Not Fooling You
           </span>
-        </div>
+        </div> */}
 
         <h1 className="animate-fade-up-1 font-display font-black text-gray-900 leading-tight mt-6 text-4xl md:text-6xl lg:text-7xl">
-          We Use Social Media As
-          <br />
-          <span className="text-pink-brand">A Weapon for Creating Revenue Systems</span>
+          We're Not Fooling You 
           <br />
           <span className="text-maroon">Claim Your Website Just ₹999</span>
         </h1>
